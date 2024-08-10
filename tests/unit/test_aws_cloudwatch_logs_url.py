@@ -81,13 +81,13 @@ class TestCreateUrlLogStream:
                 ),
             ),
             (
-                    {
-                        "region": "ap-northeast-1",
-                        "log_group_name": "/aws/lambda/luciferous-devio-index-cl-FunctionCheckIndividualS-qNWf7JYCZBBM",
-                    },
-                    Text(
-                        "https://ap-northeast-1.console.aws.amazon.com/cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Faws$252Flambda$252Fluciferous-devio-index-cl-FunctionCheckIndividualS-qNWf7JYCZBBM/log-events"
-                    ),
+                {
+                    "region": "ap-northeast-1",
+                    "log_group_name": "/aws/lambda/luciferous-devio-index-cl-FunctionCheckIndividualS-qNWf7JYCZBBM",
+                },
+                Text(
+                    "https://ap-northeast-1.console.aws.amazon.com/cloudwatch/home?region=ap-northeast-1#logsV2:log-groups/log-group/$252Faws$252Flambda$252Fluciferous-devio-index-cl-FunctionCheckIndividualS-qNWf7JYCZBBM/log-events"
+                ),
             ),
         ],
     )
