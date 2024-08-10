@@ -1,5 +1,5 @@
-from urllib.parse import quote_plus
 from typing import Optional
+from urllib.parse import quote_plus
 
 
 def encode_text(text: str, single: bool = False) -> str:
@@ -10,8 +10,8 @@ def encode_text(text: str, single: bool = False) -> str:
 
 
 ENCODED_EQUAL = encode_text("=", single=True)
-ENCODED_QUESTION = encode_text("?", single=False)
-ENCODED_AMPERSAND = encode_text("&", single=False)
+ENCODED_QUESTION = encode_text("?", single=True)
+ENCODED_AMPERSAND = encode_text("&", single=True)
 
 
 def create_url_log_group(*, region: str, log_group_name: str) -> str:
@@ -34,7 +34,7 @@ def create_url_log_stream(
     log_stream_name: Optional[str] = None,
     start: Optional[int] = None,
     end: Optional[int] = None,
-    filter_pattern: Optional[str] = None
+    filter_pattern: Optional[str] = None,
 ) -> str:
     url = (
         create_url_log_group(region=region, log_group_name=log_group_name)
@@ -44,12 +44,12 @@ def create_url_log_stream(
         url += "/" + encode_text(log_stream_name)
 
     query = []
+    if filter_pattern:
+        query += [f"filterPattern{ENCODED_EQUAL}{encode_text(filter_pattern)}"]
     if start:
         query += [f"start{ENCODED_EQUAL}{encode_text(str(start))}"]
     if end:
         query += [f"end{ENCODED_EQUAL}{encode_text(str(end))}"]
-    if filter_pattern:
-        query += [f"filterPattern{ENCODED_EQUAL}{encode_text(filter_pattern)}"]
 
     if query:
         url += encode_text("?", single=True) + encode_text("&", single=True).join(query)
