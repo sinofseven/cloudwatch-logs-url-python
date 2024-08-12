@@ -3,12 +3,12 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
       matrix:
         version:
-          - 3.8.2
+          - 3.8.12
           - 3.8.18
           - 3.9.19
           - 3.10.14
