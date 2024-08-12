@@ -15,6 +15,12 @@ ENCODED_AMPERSAND = encode_text("&", single=True)
 
 
 def create_url_log_group(*, region: str, log_group_name: str) -> str:
+    """Returns CloudWatch Logs LogGroup URL
+
+    :param region: AWS Region
+    :param log_group_name: LogGroup Name
+    :return: CloudWatch Logs LogGroup URL
+    """
     return "".join(
         [
             "https://",
@@ -27,7 +33,7 @@ def create_url_log_group(*, region: str, log_group_name: str) -> str:
     )
 
 
-def create_url_log_stream(
+def create_url_log_events(
     *,
     region: str,
     log_group_name: str,
@@ -36,6 +42,16 @@ def create_url_log_stream(
     end: Optional[int] = None,
     filter_pattern: Optional[str] = None,
 ) -> str:
+    """ Returns CloudWatch Logs LogEvents Url
+
+    :param region: AWS Region
+    :param log_group_name: LogGroup Name
+    :param log_stream_name: LogStream Name
+    :param start: The starting point of the period in milliseconds since UNIX epoch. To specify a relative time, provide a negative value in milliseconds. ex) The last 30 minutes = -1800000
+    :param end: The ending point of the period in milliseconds since UNIX epoch.
+    :param filter_pattern: FilterPattern
+    :return: CloudWatch Logs LogEvents Url
+    """
     url = (
         create_url_log_group(region=region, log_group_name=log_group_name)
         + "/log-events"

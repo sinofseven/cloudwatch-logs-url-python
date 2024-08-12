@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 import pytest
 
-from aws_cloudwatch_logs_url import create_url_log_group, create_url_log_stream
+from aws_cloudwatch_logs_url import create_url_log_group, create_url_log_events
 
 
 @dataclass(frozen=True)
@@ -92,5 +92,5 @@ class TestCreateUrlLogStream:
         ],
     )
     def test_normal(self, option, expected: Text):
-        actual = create_url_log_stream(**option)
+        actual = create_url_log_events(**option)
         assert actual == expected.value
