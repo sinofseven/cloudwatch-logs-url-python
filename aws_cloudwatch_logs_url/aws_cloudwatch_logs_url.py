@@ -42,7 +42,7 @@ def create_url_log_events(
     end: Optional[int] = None,
     filter_pattern: Optional[str] = None,
 ) -> str:
-    """ Returns CloudWatch Logs LogEvents Url
+    """Returns CloudWatch Logs LogEvents Url
 
     :param region: AWS Region
     :param log_group_name: LogGroup Name

@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 import pytest
 
-from aws_cloudwatch_logs_url import create_url_log_group, create_url_log_events
+from aws_cloudwatch_logs_url import create_url_log_events, create_url_log_group
 
 
 @dataclass(frozen=True)
