@@ -1,6 +1,6 @@
 # aws-cloudwatch-logs-url [![PypiBadge]][Pypi]
 
-[PypiBadge]: https://img.shields.io/pypi/pyversions/aws-cloudwatch-logs-url
+[PypiBadge]: https://img.shields.io/pypi/v/aws-cloudwatch-logs-url
 [Pypi]: https://pypi.org/project/aws-cloudwatch-logs-url/
 
 Generate AWS CloudWatch Logs URL

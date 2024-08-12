@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aws-cloudwatch-logs-url"
-version = "1.0.0"
+version = "1.0.2"
 description = "generate AWS CloudWatch Logs URL"
 authors = ["sinofseven <em.s.00001@gmail.com>"]
 readme = "README.md"
