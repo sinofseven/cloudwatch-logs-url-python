@@ -1,7 +1,16 @@
-# aws-cloudwatch-logs-url [![PypiBadge]][Pypi]
+# aws-cloudwatch-logs-url
+
+[![PypiBadge]][Pypi]
+[![PepyAllDownloadBadge]][Pypi]
+[![PepyMonthlyDownloadBadge]][Pepy]
+
 
 [PypiBadge]: https://img.shields.io/pypi/v/aws-cloudwatch-logs-url
 [Pypi]: https://pypi.org/project/aws-cloudwatch-logs-url/
+[Pepy]: https://www.pepy.tech/projects/aws-cloudwatch-logs-url
+[PepyAllDownloadBadge]: https://static.pepy.tech/badge/aws-cloudwatch-logs-url
+[PepyMonthlyDownloadBadge]: https://static.pepy.tech/badge/aws-cloudwatch-logs-url/month
+
 
 Generate AWS CloudWatch Logs URL
 
