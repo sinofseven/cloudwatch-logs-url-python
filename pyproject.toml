@@ -1,10 +1,10 @@
 [tool.poetry]
 name = "aws-cloudwatch-logs-url"
-version = "1.0.2"
+version = "1.0.3"
 description = "generate AWS CloudWatch Logs URL"
 authors = ["sinofseven <em.s.00001@gmail.com>"]
 readme = "README.md"
-repository = "https://github.com/sinofseven/cloudwatch-logs-url-python"
+repository = "https://github.com/sinofseven/aws-cloudwatch-logs-url-python"
 license = "MIT"
 classifiers = [
     "Development Status :: 4 - Beta",
